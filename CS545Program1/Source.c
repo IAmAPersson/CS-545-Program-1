@@ -3,6 +3,16 @@
  * 9/2/2020
  * Dr. Hauenstein
  *
+ * Software used:
+ * Windows 10 Pro
+ * Visual Studio 2017 (v141)
+ * Windows SDK Toolkit 10.0.18362.0
+ * 
+ * Hardware used:
+ * 2x Opteron 6380
+ * 64GB DDR3
+ * Nvidia Quadro K4200
+ *
  * This program renders sine and cosine waves with variable sampled points on each wave, with a default of 5 samples. The samples are equidistant on the
  * waves. The amplitute of the wave reaches exactly the top and bottom of the viewing window, and the period matches exactly the width of the viewing window.
  *
