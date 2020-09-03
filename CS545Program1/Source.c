@@ -26,9 +26,9 @@ void drawScene(void)
 	
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glVertexPointer(3, GL_FLOAT, 0, y);
-	
-	glBegin(GL_LINE_STRIP);
+
 	glColor3f(0.0, 0.0, 0.0);
+	glBegin(GL_LINE_STRIP);
 	for (unsigned int i = 0; i < 2; i++)
 		glArrayElement(i);
 	glEnd();
@@ -36,8 +36,8 @@ void drawScene(void)
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glVertexPointer(3, GL_FLOAT, 0, lines);
 
+	glColor3f(1.0, 0.0, 0.0);
 	glBegin(GL_LINE_STRIP);
-	glColor3f(0.1, 0.0, 0.0);
 	for (unsigned int i = 0; i < samples; i++)
 		glArrayElement(i);
 	glEnd();
