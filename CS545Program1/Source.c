@@ -1,3 +1,22 @@
+/* Phillip Lane
+ * CS 545 01
+ * 9/2/2020
+ * Dr. Hauenstein
+ *
+ * This program renders sine and cosine waves with variable sampled points on each wave, with a default of 5 samples. The samples are equidistant on the
+ * waves. The amplitute of the wave reaches exactly the top and bottom of the viewing window, and the period matches exactly the width of the viewing window.
+ *
+ * Implemented with GL_LINE_STRIP and vertex arrays, hence calls to glVertexPointer and glArrayElement instead of glVertex3f.
+ *
+ * Controls:
+ *   +   : Increase samples on the wave by 1 (no maximum)
+ *   -   : Decrease samples on the wave by 1 (minimum of 3)
+ *   <-  : Shift wave left by pi/8
+ *   ->  : Shift wave right by pi/8
+ * space : Toggle between sine and cosine
+ *  esc  : Quit
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #define _USE_MATH_DEFINES
@@ -5,12 +24,6 @@
 #include <stdbool.h>
 #include <GL/glew.h>
 #include <GL/freeglut.h>
-
-#define SINE 0
-#define COSINE 1
-#define Y 2
-
-#define MAXSAMPLES 250
 
 unsigned int samples = 5;
 int offset = 0;
